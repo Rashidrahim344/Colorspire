@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!mobileMenu || !mobileMenuBackdrop) return;
         mobileMenu.classList.remove('translate-x-full');
         mobileMenuBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        mobileMenuBackdrop.classList.add('pointer-events-auto');
         mobileMenuBtn?.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
     }
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!mobileMenu || !mobileMenuBackdrop) return;
         mobileMenu.classList.add('translate-x-full');
         mobileMenuBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        mobileMenuBackdrop.classList.remove('pointer-events-auto');
         mobileMenuBtn?.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
     }

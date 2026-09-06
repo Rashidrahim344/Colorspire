@@ -9,35 +9,31 @@
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
-    /* ScrewFast-Aligned Dark Neutral Palette */
-    --color-sf-dark-950: #0f1115;
-    --color-sf-dark-900: #14161b;
-    --color-sf-dark-850: #1a1d24;
-    --color-sf-dark-800: #20242d;
-    --color-sf-dark-750: #272c37;
-    --color-sf-dark-700: #323846;
+    /* ScrewFast Studio Slate & Charcoal Palette */
+    --color-sf-canvas: #f8fafc;
+    --color-sf-surface: #ffffff;
+    --color-sf-border: #e2e8f0;
+    --color-sf-border-hover: #cbd5e1;
 
-    /* ScrewFast Action Yellow / Amber Accent */
-    --color-sf-yellow-400: #facc15;
-    --color-sf-yellow-500: #eab308;
-    --color-sf-yellow-600: #ca8a04;
+    /* Text Hierarchy */
+    --color-sf-text-main: #111827;
+    --color-sf-text-muted: #475569;
+    --color-sf-text-subtle: #64748b;
 
-    /* Neutral Text Hierarchy */
-    --color-sf-text-white: #f9fafb;
-    --color-sf-text-light: #e5e7eb;
-    --color-sf-text-muted: #9ca3af;
-    --color-sf-text-dark: #6b7280;
+    /* ColorSpire Amber / Gold Accents */
+    --color-sf-amber-400: #fbbf24;
+    --color-sf-amber-500: #f59e0b;
+    --color-sf-amber-600: #d97706;
 }
 
 /* Base Body & Layout */
 html {
     scroll-behavior: smooth;
-    color-scheme: dark;
 }
 
 body {
-    background-color: var(--color-sf-dark-900);
-    color: var(--color-sf-text-light);
+    background-color: var(--color-sf-canvas);
+    color: var(--color-sf-text-main);
     font-family: var(--font-sans);
     overflow-x: hidden;
     line-height: 1.6;
@@ -48,19 +44,20 @@ body {
     position: absolute;
     top: -100px;
     left: 1rem;
-    background: var(--color-sf-yellow-400);
-    color: #0f1115;
+    background: #f59e0b;
+    color: #111827;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     font-weight: 700;
     z-index: 9999;
     transition: top 0.2s ease;
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
 }
 
 .skip-link:focus {
     top: 1rem;
-    outline: 3px solid #ffffff;
+    outline: 3px solid #111827;
 }
 
 /* Focus Visible Rings */
@@ -69,23 +66,23 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-    outline: 2px solid var(--color-sf-yellow-400);
+    outline: 2px solid #f59e0b;
     outline-offset: 2px;
 }
 
-/* ScrewFast-Style Card Surfaces */
+/* ScrewFast-Style Clean White Card Surfaces */
 .sf-card {
-    background-color: var(--color-sf-dark-850);
-    border: 1px solid var(--color-sf-dark-700);
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
     border-radius: 1rem;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
 }
 
 .sf-card-hover:hover {
-    background-color: var(--color-sf-dark-800);
-    border-color: #4b5563;
+    border-color: #cbd5e1;
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 /* ScrewFast Primary Action Button */
@@ -93,20 +90,20 @@ select:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-sf-yellow-400);
-    color: #0f1115;
+    background-color: #f59e0b;
+    color: #111827;
     font-weight: 700;
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(250, 204, 21, 0.15);
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
 }
 
 .sf-btn-yellow:hover {
-    background-color: #fde047;
+    background-color: #d97706;
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(250, 204, 21, 0.25);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
 }
 
 /* ScrewFast Neutral Secondary Button */
@@ -114,25 +111,26 @@ select:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-sf-dark-800);
-    color: var(--color-sf-text-light);
-    border: 1px solid var(--color-sf-dark-700);
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
     font-weight: 600;
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
 }
 
 .sf-btn-neutral:hover {
-    background-color: var(--color-sf-dark-750);
-    border-color: #4b5563;
-    color: #ffffff;
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
     transform: translateY(-1px);
 }
 
 /* Subtle dot mesh */
 .sf-grid-bg {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
     background-size: 24px 24px;
 }
