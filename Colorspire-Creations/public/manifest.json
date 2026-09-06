@@ -1,0 +1,20 @@
+{
+  "name": "ScrewFast",
+  "short_name": "ScrewFast",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#facc15",
+  "theme_color": "#facc15",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,136 +1,153 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* Preline UI */
+@source '../../node_modules/preline/dist/*.js';
+@import '../../node_modules/preline/variants.css';
+
+/* Plugins */
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  /* https://tailwindcss.com/docs/colors#customizing-your-colors */
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-black: #000;
+  --color-white: #fff;
 
-    /* ScrewFast Studio Slate & Charcoal Palette */
-    --color-sf-canvas: #f8fafc;
-    --color-sf-surface: #ffffff;
-    --color-sf-border: #e2e8f0;
-    --color-sf-border-hover: #cbd5e1;
+  --color-gray-50: oklch(0.985 0.002 247.839);
+  --color-gray-100: oklch(0.967 0.003 264.542);
+  --color-gray-200: oklch(0.928 0.006 264.531);
+  --color-gray-300: oklch(0.872 0.01 258.338);
+  --color-gray-400: oklch(0.707 0.022 261.325);
+  --color-gray-500: oklch(0.551 0.027 264.364);
+  --color-gray-600: oklch(0.446 0.03 256.802);
+  --color-gray-700: oklch(0.373 0.034 259.733);
+  --color-gray-800: oklch(0.278 0.033 256.848);
+  --color-gray-900: oklch(0.21 0.034 264.665);
+  --color-gray-950: oklch(0.13 0.028 261.692);
 
-    /* Text Hierarchy */
-    --color-sf-text-main: #111827;
-    --color-sf-text-muted: #475569;
-    --color-sf-text-subtle: #64748b;
+  --color-indigo-50: oklch(0.962 0.018 272.314);
+  --color-indigo-100: oklch(0.93 0.034 272.788);
+  --color-indigo-200: oklch(0.87 0.065 274.039);
+  --color-indigo-300: oklch(0.785 0.115 274.713);
+  --color-indigo-400: oklch(0.673 0.182 276.935);
+  --color-indigo-500: oklch(0.585 0.233 277.117);
+  --color-indigo-600: oklch(0.511 0.262 276.966);
+  --color-indigo-700: oklch(0.457 0.24 277.023);
+  --color-indigo-800: oklch(0.398 0.195 277.366);
+  --color-indigo-900: oklch(0.359 0.144 278.697);
+  --color-indigo-950: oklch(0.257 0.09 281.288);
 
-    /* ColorSpire Amber / Gold Accents */
-    --color-sf-amber-400: #fbbf24;
-    --color-sf-amber-500: #f59e0b;
-    --color-sf-amber-600: #d97706;
+  --color-neutral-50: oklch(0.985 0 0);
+  --color-neutral-100: oklch(0.97 0 0);
+  --color-neutral-200: oklch(0.922 0 0);
+  --color-neutral-300: oklch(0.87 0 0);
+  --color-neutral-400: oklch(0.708 0 0);
+  --color-neutral-500: oklch(0.556 0 0);
+  --color-neutral-600: oklch(0.439 0 0);
+  --color-neutral-700: oklch(0.371 0 0);
+  --color-neutral-800: oklch(0.269 0 0);
+  --color-neutral-900: oklch(0.205 0 0);
+  --color-neutral-950: oklch(0.145 0 0);
+
+  --color-yellow-50: oklch(0.987 0.026 102.212);
+  --color-yellow-100: oklch(0.973 0.071 103.193);
+  --color-yellow-200: oklch(0.945 0.129 101.54);
+  --color-yellow-300: oklch(0.905 0.182 98.111);
+  --color-yellow-400: oklch(0.852 0.199 91.936);
+  --color-yellow-500: oklch(0.795 0.184 86.047);
+  --color-yellow-600: oklch(0.681 0.162 75.834);
+  --color-yellow-700: oklch(0.554 0.135 66.442);
+  --color-yellow-800: oklch(0.476 0.114 61.907);
+  --color-yellow-900: oklch(0.421 0.095 57.708);
+  --color-yellow-950: oklch(0.286 0.066 53.813);
+
+  --color-orange-50: oklch(0.98 0.016 73.684);
+  --color-orange-100: oklch(0.954 0.038 75.164);
+  --color-orange-200: oklch(0.901 0.076 70.697);
+  --color-orange-300: oklch(70.72% 0.182 40.56);
+  --color-orange-400: oklch(67.4% 0.2072 39.23);
+  --color-orange-500: oklch(61.86% 0.1946 38.88);
+  --color-orange-600: oklch(0.646 0.222 41.116);
+  --color-orange-700: oklch(0.553 0.195 38.402);
+  --color-orange-800: oklch(0.47 0.157 37.304);
+  --color-orange-900: oklch(0.408 0.123 38.172);
+  --color-orange-950: oklch(0.266 0.079 36.259);
+
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+  --color-red-300: oklch(0.808 0.114 19.571);
+  --color-red-400: oklch(0.704 0.191 22.216);
+  --color-red-500: oklch(0.637 0.237 25.331);
+  --color-red-600: oklch(0.577 0.245 27.325);
+  --color-red-700: oklch(0.505 0.213 27.518);
+  --color-red-800: oklch(0.444 0.177 26.899);
+  --color-red-900: oklch(0.396 0.141 25.723);
+  --color-red-950: oklch(0.258 0.092 26.042);
+
+  --color-zinc-50: oklch(0.985 0 0);
+  --color-zinc-100: oklch(0.967 0.001 286.375);
+  --color-zinc-200: oklch(0.92 0.004 286.32);
+  --color-zinc-300: oklch(0.871 0.006 286.286);
+  --color-zinc-400: oklch(0.705 0.015 286.067);
+  --color-zinc-500: oklch(0.552 0.016 285.938);
+  --color-zinc-600: oklch(0.442 0.017 285.786);
+  --color-zinc-700: oklch(0.37 0.013 285.805);
+  --color-zinc-800: oklch(0.274 0.006 286.033);
+  --color-zinc-900: oklch(0.21 0.006 285.885);
+  --color-zinc-950: oklch(0.141 0.005 285.823);
 }
 
-/* Base Body & Layout */
-html {
-    scroll-behavior: smooth;
-}
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 
-body {
-    background-color: var(--color-sf-canvas);
-    color: var(--color-sf-text-main);
-    font-family: var(--font-sans);
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-/* Keyboard Accessibility Skip Link */
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 1rem;
-    background: #f59e0b;
-    color: #111827;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    font-weight: 700;
-    z-index: 9999;
-    transition: top 0.2s ease;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
-}
-
-.skip-link:focus {
-    top: 1rem;
-    outline: 3px solid #111827;
-}
-
-/* Focus Visible Rings */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-    outline: 2px solid #f59e0b;
-    outline-offset: 2px;
-}
-
-/* ScrewFast-Style Clean White Card Surfaces */
-.sf-card {
-    background-color: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
-    border-radius: 1rem;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-}
-
-.sf-card-hover:hover {
-    border-color: #cbd5e1;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-}
-
-/* ScrewFast Primary Action Button */
-.sf-btn-yellow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f59e0b;
-    color: #111827;
-    font-weight: 700;
-    border-radius: 0.75rem;
-    padding: 0.625rem 1.25rem;
-    transition: all 0.2s ease-in-out;
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+  }
 }
 
-.sf-btn-yellow:hover {
-    background-color: #d97706;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+/* Lenis smooth scrolling styles */
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
-/* ScrewFast Neutral Secondary Button */
-.sf-btn-neutral {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #1e293b;
-    border: 1px solid #e2e8f0;
-    font-weight: 600;
-    border-radius: 0.75rem;
-    padding: 0.625rem 1.25rem;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
 }
 
-.sf-btn-neutral:hover {
-    background-color: #f8fafc;
-    border-color: #cbd5e1;
-    color: #0f172a;
-    transform: translateY(-1px);
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
-/* Subtle dot mesh */
-.sf-grid-bg {
-    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-size: 24px 24px;
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+/* Scrollbar styling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -1,0 +1,55 @@
+@php
+$config = [
+  'id' => 'hs-toggle-between-modals-recover-modal',
+  'title' => 'Forgot password?',
+  'subTitle' => 'Remember your password?',
+  'loginBtn' => 'Sign in here',
+  'loginBtnDataHS' => '#hs-toggle-between-modals-login-modal',
+];
+@endphp
+
+<div
+  id="{{ $config['id'] }}"
+  class="hs-overlay hs-overlay-backdrop-open:bg-neutral-900/90 absolute start-0 top-0 z-50 hidden h-full w-full"
+>
+  <div
+    class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 m-3 mt-0 opacity-0 transition-all ease-out sm:mx-auto sm:w-full sm:max-w-lg"
+  >
+    <div class="mx-auto w-full max-w-md p-6">
+      <div
+        class="mt-7 rounded-xl border border-neutral-200 bg-neutral-100 shadow-xs dark:border-neutral-700 dark:bg-neutral-800"
+      >
+        <div class="p-4 sm:p-7">
+          <div class="text-center">
+            <div
+              class="block text-2xl font-bold text-neutral-800 dark:text-neutral-200"
+              role="heading"
+              aria-level="1"
+              aria-label="{{ $config['title'] }}"
+            >
+              {{ $config['title'] }}
+            </div>
+            <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              {{ $config['subTitle'] }}
+              <button
+                class="rounded-lg p-1 font-medium text-orange-400 decoration-2 ring-zinc-500 outline-hidden hover:underline focus-visible:ring-3 dark:text-orange-400 dark:ring-zinc-200 dark:focus:outline-hidden"
+                data-hs-overlay="{{ $config['loginBtnDataHS'] }}"
+              >
+                {{ $config['loginBtn'] }}
+              </button>
+            </p>
+          </div>
+
+          <div class="mt-5">
+            <form>
+              <div class="grid gap-y-4">
+                <x-forms.input.email-input id="recover-email" errorId="recover-email-error" />
+                <x-buttons.auth-btn title="Reset password" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
