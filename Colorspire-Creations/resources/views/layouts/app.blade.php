@@ -52,20 +52,20 @@
     </script>
     @stack('head')
 </head>
-<body class="bg-[#14161b] text-neutral-200 min-h-screen flex flex-col selection:bg-yellow-400 selection:text-neutral-950">
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-amber-400 selection:text-slate-950 font-sans antialiased">
     <!-- Accessible Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Session Feedback Banner -->
     @if(session('success'))
-        <div id="flash-alert" class="fixed top-24 right-4 z-50 max-w-md bg-[#1f242e] border border-yellow-400/50 text-neutral-100 p-4 rounded-xl shadow-2xl backdrop-blur-md flex items-start space-x-3" role="alert">
-            <svg class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <div id="flash-alert" class="fixed top-24 right-4 z-50 max-w-md bg-white border border-amber-400/80 text-slate-900 p-4 rounded-xl shadow-xl flex items-start space-x-3" role="alert">
+            <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <div class="flex-1 text-sm font-medium">
+            <div class="flex-1 text-sm font-medium text-slate-800">
                 {{ session('success') }}
             </div>
-            <button id="flash-alert-close" type="button" class="text-neutral-400 hover:text-white transition-colors" aria-label="Close notification">
+            <button id="flash-alert-close" type="button" class="text-slate-400 hover:text-slate-700 transition-colors" aria-label="Close notification">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
         </div>

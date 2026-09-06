@@ -1,23 +1,25 @@
 @props([
-    'variant' => 'emerald',
+    'variant' => 'amber',
     'pulse' => false
 ])
 
 @php
     $classes = match($variant) {
-        'copper' => 'bg-amber-500/10 text-amber-300 border-amber-500/30',
-        'neutral' => 'bg-slate-800/60 text-slate-300 border-slate-700/60',
-        default => 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30',
+        'neutral' => 'bg-slate-100 text-slate-700 border-slate-200/80',
+        'slate' => 'bg-slate-100 text-slate-700 border-slate-200/80',
+        'copper' => 'bg-amber-50 text-amber-800 border-amber-200/80',
+        'emerald' => 'bg-amber-50 text-amber-800 border-amber-200/80',
+        default => 'bg-amber-50 text-amber-800 border-amber-200/80',
     };
 
     $dotColor = match($variant) {
-        'copper' => 'bg-amber-400',
-        'neutral' => 'bg-slate-400',
-        default => 'bg-emerald-400',
+        'neutral' => 'bg-slate-500',
+        'slate' => 'bg-slate-500',
+        default => 'bg-amber-500',
     };
 @endphp
 
-<span {{ $attributes->merge(['class' => "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border {$classes}"]) }}>
+<span {{ $attributes->merge(['class' => "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide border {$classes}"]) }}>
     @if($pulse)
         <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full {{ $dotColor }} opacity-75"></span>

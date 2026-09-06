@@ -3,7 +3,7 @@
     'title',
     'description' => null,
     'align' => 'center',
-    'badgeVariant' => 'emerald'
+    'badgeVariant' => 'amber'
 ])
 
 @php
@@ -11,6 +11,12 @@
         'left' => 'text-left items-start',
         'right' => 'text-right items-end',
         default => 'text-center items-center mx-auto',
+    };
+
+    $descAlign = match($align) {
+        'left' => 'text-left',
+        'right' => 'text-right',
+        default => 'text-center mx-auto',
     };
 @endphp
 
@@ -21,13 +27,14 @@
         </div>
     @endif
 
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight font-extrabold text-slate-900 leading-tight">
         {{ $title }}
     </h2>
 
     @if($description)
-        <p class="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+        <p class="mt-4 text-base sm:text-lg text-slate-500 leading-relaxed max-w-2xl {{ $descAlign }}">
             {{ $description }}
         </p>
     @endif
 </div>
+

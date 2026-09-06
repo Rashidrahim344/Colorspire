@@ -1,15 +1,7 @@
 @props([
     'hover' => true,
-    'borderGlow' => 'emerald',
 ])
 
-@php
-    $glowClass = match($borderGlow) {
-        'copper' => 'hover:border-amber-500/40 hover:shadow-amber-500/10',
-        default => 'hover:border-emerald-500/40 hover:shadow-emerald-500/10',
-    };
-@endphp
-
-<div {{ $attributes->merge(['class' => 'glass-card rounded-2xl p-6 sm:p-8 ' . ($hover ? "glass-card-hover {$glowClass}" : '')]) }}>
+<div {{ $attributes->merge(['class' => 'bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm ' . ($hover ? 'hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-200' : '')]) }}>
     {{ $slot }}
 </div>

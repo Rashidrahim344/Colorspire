@@ -1,8 +1,8 @@
-<section id="services" class="py-20 sm:py-32 bg-[#0b0f19]/40 relative border-t border-white/5">
+<section id="services" class="py-20 sm:py-32 bg-slate-50 relative border-t border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <x-section-heading 
             eyebrow="What We Build" 
-            badgeVariant="emerald"
+            badgeVariant="amber"
             title="Strategic Engineering & Design for Modern Brands"
             description="We build robust digital solutions tailored to your operational realities, combining clean backend architecture with refined, conversion-driven interfaces."
         />
