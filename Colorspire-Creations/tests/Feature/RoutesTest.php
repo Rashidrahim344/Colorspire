@@ -10,14 +10,14 @@ class RoutesTest extends TestCase
     {
         $response = $this->get('/');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_french_home_page_loads_successfully(): void
     {
         $response = $this->get('/fr');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_services_page_loads_successfully(): void
@@ -34,53 +34,95 @@ class RoutesTest extends TestCase
         $response->assertSee('Services');
     }
 
+    public function test_portfolio_page_loads_successfully(): void
+    {
+        $response = $this->get('/portfolio');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
+    public function test_french_portfolio_page_loads_successfully(): void
+    {
+        $response = $this->get('/fr/portfolio');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
+    public function test_about_page_loads_successfully(): void
+    {
+        $response = $this->get('/about');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
+    public function test_french_about_page_loads_successfully(): void
+    {
+        $response = $this->get('/fr/about');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
+    public function test_hub_page_loads_successfully(): void
+    {
+        $response = $this->get('/hub');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
+    public function test_french_hub_page_loads_successfully(): void
+    {
+        $response = $this->get('/fr/hub');
+        $response->assertStatus(200);
+        $response->assertSee('ColorSpire');
+    }
+
     public function test_products_index_page_loads_successfully(): void
     {
         $response = $this->get('/products');
         $response->assertStatus(200);
-        $response->assertSee('Products');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_french_products_index_page_loads_successfully(): void
     {
         $response = $this->get('/fr/products');
         $response->assertStatus(200);
-        $response->assertSee('Produits');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_product_detail_page_loads_successfully(): void
     {
         $response = $this->get('/products/item-a765');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_blog_index_page_loads_successfully(): void
     {
         $response = $this->get('/blog');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_french_blog_index_page_loads_successfully(): void
     {
         $response = $this->get('/fr/blog');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_blog_post_page_loads_successfully(): void
     {
         $response = $this->get('/blog/post-1');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_insight_page_loads_successfully(): void
     {
         $response = $this->get('/insights/insight-1');
         $response->assertStatus(200);
-        $response->assertSee('ScrewFast');
+        $response->assertSee('ColorSpire');
     }
 
     public function test_contact_page_loads_successfully(): void
@@ -94,7 +136,7 @@ class RoutesTest extends TestCase
     {
         $response = $this->get('/fr/contact');
         $response->assertStatus(200);
-        $response->assertSee('Contacter');
+        $response->assertSee('Contact');
     }
 
     public function test_not_found_page_renders_custom_404(): void

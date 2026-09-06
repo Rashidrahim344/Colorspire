@@ -27,32 +27,32 @@ class HomeController extends Controller
         if ($locale === 'fr') {
             $testimonials = [
                 [
-                    'content' => "ScrewFast a considérablement augmenté l'efficacité de notre projet. La configuration a été instantanée et leurs temps de réponse rapides sont phénoménaux. Vraiment un changement de jeu dans le support matériel et de construction !",
-                    'author' => 'Samantha Ruiz',
-                    'role' => 'Directrice des opérations | ConstructIt Inc.',
+                    'content' => '[TÉMOIGNAGE CLIENT VÉRIFIÉ — 20–35 MOTS]',
+                    'author' => '[NOM DU CLIENT]',
+                    'role' => '[RÔLE] • [ORGANISATION]',
                     'avatarSrc' => 'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
                 ],
             ];
             $statistics = [
-                ['count' => '70k+', 'description' => 'clients équipés — des bricoleurs aux grandes entreprises de construction'],
-                ['count' => '35%', 'description' => "hausse de l'efficacité des projets avec les outils et services de ScrewFast"],
-                ['count' => '15,3%', 'description' => 'réduction des coûts de maintenance rapportée par des clients à long terme'],
-                ['count' => '2x', 'description' => 'assemblage plus rapide grâce à des solutions de fixation innovantes'],
+                ['count' => '[VERIFIÉ]', 'description' => '[PROJETS RÉALISÉS]'],
+                ['count' => '[VERIFIÉ]', 'description' => '[CLIENTS ACCOMPAGNÉS]'],
+                ['count' => '[VERIFIÉ]', 'description' => '[MARQUES DÉVELOPPÉES]'],
+                ['count' => '[VERIFIÉ]', 'description' => '[SITES WEB CONÇUS]'],
             ];
         } else {
             $testimonials = [
                 [
-                    'content' => 'ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!',
-                    'author' => 'Samantha Ruiz',
-                    'role' => 'Chief Operating Officer | ConstructIt Inc.',
+                    'content' => '[VERIFIED CLIENT TESTIMONIAL — 20–35 WORDS]',
+                    'author' => '[CLIENT NAME]',
+                    'role' => '[ROLE] • [ORGANIZATION]',
                     'avatarSrc' => 'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
                 ],
             ];
             $statistics = [
-                ['count' => '70k+', 'description' => 'customers equipped — from DIY to major construction firms'],
-                ['count' => '35%', 'description' => 'uptick in project efficiency with ScrewFast tools and services'],
-                ['count' => '15.3%', 'description' => 'reduction in maintenance costs reported by long-term clients'],
-                ['count' => '2x', 'description' => 'quicker assembly using innovative fastening solutions'],
+                ['count' => '[VERIFIED]', 'description' => '[PROJECTS COMPLETED]'],
+                ['count' => '[VERIFIED]', 'description' => '[CLIENTS SERVED]'],
+                ['count' => '[VERIFIED]', 'description' => '[BRANDS DEVELOPED]'],
+                ['count' => '[VERIFIED]', 'description' => '[WEBSITES BUILT]'],
             ];
         }
 

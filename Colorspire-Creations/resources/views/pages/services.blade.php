@@ -1,11 +1,13 @@
 @php
 $metaDescription = $locale === 'fr'
-  ? "Unissant l'expertise à votre vision, ScrewFast fournit un service exceptionnel et des solutions complètes dans le secteur du matériel et de la construction, de la consultation à l'achèvement du projet."
-  : 'Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.';
+  ? "D'un simple élément visuel à une présence numérique complète, ColorSpire allie créativité, cohérence et exécution pratique."
+  : 'From a single visual asset to a complete digital presence, ColorSpire combines creativity, consistency and practical execution.';
 $ogTitle = $locale === 'fr'
-  ? "Services de Consultation d'Experts | ScrewFast"
-  : 'Expert Consultation Services | ScrewFast';
-$title = "Services | {$site['title']}";
+  ? "Services Créatifs & Numériques | {$site['title']}"
+  : "Creative & Digital Services | {$site['title']}";
+$title = $locale === 'fr'
+  ? "Services Créatifs & Numériques | {$site['title']}"
+  : "Creative & Digital Services | {$site['title']}";
 @endphp
 
 <x-layouts.app

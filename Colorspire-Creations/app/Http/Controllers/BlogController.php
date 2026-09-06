@@ -19,19 +19,19 @@ class BlogController extends Controller
         $otherPosts = array_slice($blogPosts, 1);
 
         if ($locale === 'fr') {
-            $title = "Votre Passerelle vers l'Excellence en Construction";
-            $subTitle = 'Explorez les dernières actualités, astuces et analyses de ScrewFast pour améliorer vos projets de construction. Des mises en avant de produits aux stratégies de gestion de projet, notre blog est votre ressource incontournable pour tout ce qui concerne les outils et la construction.';
-            $secondTitle = 'Perspectives';
-            $secondSubTitle = "Restez à jour avec les dernières tendances et évolutions de l'industrie de la construction grâce aux analyses de l'équipe d'experts de ScrewFast.";
-            $metaDescription = "Restez informé des dernières tendances et évolutions dans le secteur de la construction avec les analyses de l'équipe d'experts de ScrewFast.";
-            $ogTitle = "Blog de l'Industrie de la Construction | ScrewFast";
+            $title = 'Idées pour de meilleures marques et de meilleures expériences numériques';
+            $subTitle = 'Des analyses pratiques sur le design, le branding, les sites web, la création de contenu, les réseaux sociaux et la croissance numérique.';
+            $secondTitle = 'Catégories éditoriales suggérées';
+            $secondSubTitle = 'Conseils Design • Branding • Développement Web • Réseaux Sociaux • Création de Contenu • Présence Numérique';
+            $metaDescription = 'Des analyses pratiques sur le design, le branding, les sites web et les réseaux sociaux par ColorSpire Creations.';
+            $ogTitle = 'Perspectives | ColorSpire Creations';
         } else {
-            $title = 'Your Gateway to Construction Excellence';
-            $subTitle = 'Explore the latest news, tips, and insights from ScrewFast to enhance your construction projects. From product spotlights to project management strategies, our blog is your go-to resource for all things hardware and construction.';
-            $secondTitle = 'Insights';
-            $secondSubTitle = "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts. ";
-            $metaDescription = "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.";
-            $ogTitle = 'Construction Industry Blog | ScrewFast';
+            $title = 'Ideas for Better Brands and Better Digital Experiences';
+            $subTitle = 'Practical insights on design, branding, websites, content creation, social media and digital growth.';
+            $secondTitle = 'Suggested Editorial Categories';
+            $secondSubTitle = 'Design Tips • Branding • Web Development • Social Media • Content Creation • Business & Digital Presence • ColorSpire Projects';
+            $metaDescription = 'Practical insights on design, branding, websites, content creation, social media and digital growth from ColorSpire Creations.';
+            $ogTitle = 'Insights | ColorSpire Creations';
         }
 
         return view('pages.blog.index', compact(

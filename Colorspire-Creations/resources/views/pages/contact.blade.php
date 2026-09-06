@@ -1,10 +1,10 @@
 @php
 $isFr = ($locale ?? app()->getLocale()) === 'fr';
-$title = $isFr ? "Nous Contacter | " . ($site['title'] ?? 'ScrewFast') : "Contact | " . ($site['title'] ?? 'ScrewFast');
+$title = $isFr ? "Démarrer un projet | Contact " . ($site['title'] ?? 'ColorSpire Creations') : "Start a Project | Contact " . ($site['title'] ?? 'ColorSpire Creations');
 $description = $isFr
-  ? "Vous avez des questions ou souhaitez discuter d'un projet ? Contactez-nous et élaborons ensemble la solution parfaite avec nos outils et services."
-  : "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-$ogTitle = $isFr ? 'Nous Contacter | ScrewFast' : 'Contact Us | ScrewFast';
+  ? "Dites-nous ce dont vous avez besoin, ce que vous essayez d'accomplir et quand vous en avez besoin. Nous utiliserons ces informations pour comprendre votre projet et recommander la meilleure suite."
+  : "Tell us what you need, what you are trying to achieve and when you need it. We'll use that information to understand the project and recommend the next step.";
+$ogTitle = $title;
 @endphp
 
 <x-layouts.app

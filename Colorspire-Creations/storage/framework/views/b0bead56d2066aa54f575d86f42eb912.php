@@ -10,14 +10,14 @@
 <?php $component->withAttributes(['lang' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($locale)]); ?>
   <?php if (isset($component)) { $__componentOriginalbd62305e670a299d69070fc5c014342f = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalbd62305e670a299d69070fc5c014342f = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.banners.announcement-banner','data' => ['btnId' => 'dismiss-button','btnTitle' => $locale === 'fr' ? 'Découvrez ScrewFast sur GitHub' : 'Explore ScrewFast on GitHub','url' => '#!']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.banners.announcement-banner','data' => ['btnId' => 'dismiss-button','btnTitle' => $locale === 'fr' ? 'Concevoir l\'influence visuelle — Bâtir pour inspirer' : 'Designing Visual Influence — Built to Inspire','url' => '#!']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('banners.announcement-banner'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['btnId' => 'dismiss-button','btnTitle' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($locale === 'fr' ? 'Découvrez ScrewFast sur GitHub' : 'Explore ScrewFast on GitHub'),'url' => '#!']); ?>
+<?php $component->withAttributes(['btnId' => 'dismiss-button','btnTitle' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($locale === 'fr' ? 'Concevoir l\'influence visuelle — Bâtir pour inspirer' : 'Designing Visual Influence — Built to Inspire'),'url' => '#!']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalbd62305e670a299d69070fc5c014342f)): ?>
@@ -32,14 +32,14 @@
   <?php if($locale === 'fr'): ?>
     <?php if (isset($component)) { $__componentOriginal8b82850521ad3ee867ba2b233314a5e4 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal8b82850521ad3ee867ba2b233314a5e4 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section','data' => ['title' => 'Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>','subTitle' => 'Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet.','primaryBtn' => 'Commencez à explorer','primaryBtnURL' => '/fr/products','secondaryBtn' => 'Contacter l\'équipe commerciale','secondaryBtnURL' => '/fr/contact','withReview' => true,'avatars' => $avatars,'rating' => '<span class="font-bold">4.8</span> / 5','starCount' => 4,'reviews' => 'À partir de plus de <span class="font-bold">12,8k</span> avis','src' => 'images/hero-image.avif','alt' => 'Pile de boîtes de produits ScrewFast contenant des outils matériels assortis']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section','data' => ['title' => 'Concevoir des marques. <span class="text-yellow-500 dark:text-yellow-400">Bâtir des expériences numériques.</span>','subTitle' => 'ColorSpire Creations aide les entreprises, organisations et esprits ambitieux à transformer leurs idées en identités visuelles fortes, contenus captivants et expériences numériques conçues pour marquer les esprits.','primaryBtn' => 'Démarrer un projet','primaryBtnURL' => '/fr/contact','secondaryBtn' => 'Explorer nos réalisations','secondaryBtnURL' => '/fr/portfolio','withReview' => true,'avatars' => $avatars,'rating' => '<span class="font-bold">5.0</span>','starCount' => 5,'reviews' => '<span class="font-bold">[AVIS CLIENTS VÉRIFIÉS]</span>','src' => 'images/hero-image.avif','alt' => 'ColorSpire Creations branding et solutions numériques']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.hero-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>','subTitle' => 'Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet.','primaryBtn' => 'Commencez à explorer','primaryBtnURL' => '/fr/products','secondaryBtn' => 'Contacter l\'équipe commerciale','secondaryBtnURL' => '/fr/contact','withReview' => true,'avatars' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($avatars),'rating' => '<span class="font-bold">4.8</span> / 5','starCount' => 4,'reviews' => 'À partir de plus de <span class="font-bold">12,8k</span> avis','src' => 'images/hero-image.avif','alt' => 'Pile de boîtes de produits ScrewFast contenant des outils matériels assortis']); ?>
+<?php $component->withAttributes(['title' => 'Concevoir des marques. <span class="text-yellow-500 dark:text-yellow-400">Bâtir des expériences numériques.</span>','subTitle' => 'ColorSpire Creations aide les entreprises, organisations et esprits ambitieux à transformer leurs idées en identités visuelles fortes, contenus captivants et expériences numériques conçues pour marquer les esprits.','primaryBtn' => 'Démarrer un projet','primaryBtnURL' => '/fr/contact','secondaryBtn' => 'Explorer nos réalisations','secondaryBtnURL' => '/fr/portfolio','withReview' => true,'avatars' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($avatars),'rating' => '<span class="font-bold">5.0</span>','starCount' => 5,'reviews' => '<span class="font-bold">[AVIS CLIENTS VÉRIFIÉS]</span>','src' => 'images/hero-image.avif','alt' => 'ColorSpire Creations branding et solutions numériques']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal8b82850521ad3ee867ba2b233314a5e4)): ?>
@@ -53,14 +53,14 @@
 
     <?php if (isset($component)) { $__componentOriginalf3f06e19bdd700d96fbecb3fe1c301eb = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf3f06e19bdd700d96fbecb3fe1c301eb = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.clients-section','data' => ['title' => 'Faites confiance aux leaders de l\'industrie','subTitle' => 'Découvrez la fiabilité choisie par les géants de l\'industrie.','partners' => $partners]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.clients-section','data' => ['title' => 'Conçu pour aider les marques à mieux communiquer','subTitle' => 'Du design visuel aux expériences numériques, ColorSpire réunit stratégie, créativité et exécution. [PARTENAIRES VÉRIFIÉS]','partners' => $partners]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.clients-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Faites confiance aux leaders de l\'industrie','subTitle' => 'Découvrez la fiabilité choisie par les géants de l\'industrie.','partners' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($partners)]); ?>
+<?php $component->withAttributes(['title' => 'Conçu pour aider les marques à mieux communiquer','subTitle' => 'Du design visuel aux expériences numériques, ColorSpire réunit stratégie, créativité et exécution. [PARTENAIRES VÉRIFIÉS]','partners' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($partners)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf3f06e19bdd700d96fbecb3fe1c301eb)): ?>
@@ -74,14 +74,14 @@
 
     <?php if (isset($component)) { $__componentOriginal05aa5c1b310d3deca2315a7d82ec4fb3 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal05aa5c1b310d3deca2315a7d82ec4fb3 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-general','data' => ['title' => 'Répondre aux exigences de l\'industrie','subTitle' => 'Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs.','src' => 'images/features-image.avif','alt' => 'Produits ScrewFast dans des boîtes flottantes','features' => $features]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-general','data' => ['title' => 'Des solutions créatives pour les marques qui veulent être prises au sérieux','subTitle' => 'Votre marque est plus qu\'un logo, et votre site web est plus qu\'une collection de pages. Nous combinons design, contenu et technologie pour vous aider à communiquer clairement, afficher votre professionnalisme et développer des points de contact numériques plus solides.','src' => 'images/features-image.avif','alt' => 'Solutions créatives ColorSpire Creations','features' => $features]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.features.features-general'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Répondre aux exigences de l\'industrie','subTitle' => 'Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs.','src' => 'images/features-image.avif','alt' => 'Produits ScrewFast dans des boîtes flottantes','features' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($features)]); ?>
+<?php $component->withAttributes(['title' => 'Des solutions créatives pour les marques qui veulent être prises au sérieux','subTitle' => 'Votre marque est plus qu\'un logo, et votre site web est plus qu\'une collection de pages. Nous combinons design, contenu et technologie pour vous aider à communiquer clairement, afficher votre professionnalisme et développer des points de contact numériques plus solides.','src' => 'images/features-image.avif','alt' => 'Solutions créatives ColorSpire Creations','features' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($features)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal05aa5c1b310d3deca2315a7d82ec4fb3)): ?>
@@ -95,29 +95,29 @@
 
     <?php if (isset($component)) { $__componentOriginalc91e2e789fc6bca47da051e62a101d20 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalc91e2e789fc6bca47da051e62a101d20 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-navs','data' => ['title' => 'Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.','tabs' => [
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-navs','data' => ['title' => 'Tout ce dont vous avez besoin pour bâtir une <span class="text-yellow-500 dark:text-yellow-400">présence numérique plus forte</span>','tabs' => [
         [
-          'heading' => 'Outils de pointe',
-          'content' => 'Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l\'expérience d\'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.',
+          'heading' => 'Stratégie créative',
+          'content' => 'Transformez vos idées en réalisations visibles, compréhensibles et mémorables — Nous partons de vos objectifs pour concevoir une direction visuelle adaptée à votre message, à votre audience et aux résultats visés. [Créer ma marque]',
           'svg' => 'tools',
           'src' => 'images/automated-tools.avif',
-          'alt' => 'Équipement lourd jaune et noir sur un champ d\'herbe brune',
+          'alt' => 'Stratégie créative et direction visuelle',
           'first' => true,
         ],
         [
-          'heading' => 'Tableaux de bord intuitifs',
-          'content' => 'Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.',
+          'heading' => 'Expériences numériques',
+          'content' => 'Des sites web conçus pour les humains, pas seulement pour les écrans — Nous créons des expériences numériques responsives qui permettent à vos visiteurs de comprendre votre offre, de vous faire confiance et de passer à l\'action. [Lancer un projet de site]',
           'svg' => 'dashboard',
           'src' => 'images/dashboard-image.avif',
-          'alt' => 'Capture d\'écran ou représentation graphique du tableau de bord intuitif',
+          'alt' => 'Expériences numériques responsives et sites web',
           'second' => true,
         ],
         [
-          'heading' => 'Fonctionnalités robustes',
-          'content' => 'Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.',
+          'heading' => 'Contenu et réseaux sociaux',
+          'content' => 'Gardez votre marque visible sans perdre son identité — Des visuels sociaux aux campagnes de communication, nous vous aidons à bâtir une présence visuelle cohérente là où se trouve votre public. [Planifier mon contenu]',
           'svg' => 'house',
           'src' => 'images/construction-image.avif',
-          'alt' => 'Structure métallique grise d\'un bâtiment près d\'une grue à tour pendant la journée',
+          'alt' => 'Création de contenu et visuels pour réseaux sociaux',
         ],
       ]]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.features.features-navs'); ?>
@@ -126,29 +126,29 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.','tabs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute([
+<?php $component->withAttributes(['title' => 'Tout ce dont vous avez besoin pour bâtir une <span class="text-yellow-500 dark:text-yellow-400">présence numérique plus forte</span>','tabs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute([
         [
-          'heading' => 'Outils de pointe',
-          'content' => 'Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l\'expérience d\'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.',
+          'heading' => 'Stratégie créative',
+          'content' => 'Transformez vos idées en réalisations visibles, compréhensibles et mémorables — Nous partons de vos objectifs pour concevoir une direction visuelle adaptée à votre message, à votre audience et aux résultats visés. [Créer ma marque]',
           'svg' => 'tools',
           'src' => 'images/automated-tools.avif',
-          'alt' => 'Équipement lourd jaune et noir sur un champ d\'herbe brune',
+          'alt' => 'Stratégie créative et direction visuelle',
           'first' => true,
         ],
         [
-          'heading' => 'Tableaux de bord intuitifs',
-          'content' => 'Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.',
+          'heading' => 'Expériences numériques',
+          'content' => 'Des sites web conçus pour les humains, pas seulement pour les écrans — Nous créons des expériences numériques responsives qui permettent à vos visiteurs de comprendre votre offre, de vous faire confiance et de passer à l\'action. [Lancer un projet de site]',
           'svg' => 'dashboard',
           'src' => 'images/dashboard-image.avif',
-          'alt' => 'Capture d\'écran ou représentation graphique du tableau de bord intuitif',
+          'alt' => 'Expériences numériques responsives et sites web',
           'second' => true,
         ],
         [
-          'heading' => 'Fonctionnalités robustes',
-          'content' => 'Minimisez la complexité, maximisez la productivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.',
+          'heading' => 'Contenu et réseaux sociaux',
+          'content' => 'Gardez votre marque visible sans perdre son identité — Des visuels sociaux aux campagnes de communication, nous vous aidons à bâtir une présence visuelle cohérente là où se trouve votre public. [Planifier mon contenu]',
           'svg' => 'house',
           'src' => 'images/construction-image.avif',
-          'alt' => 'Structure métallique grise d\'un bâtiment près d\'une grue à tour pendant la journée',
+          'alt' => 'Création de contenu et visuels pour réseaux sociaux',
         ],
       ])]); ?>
 <?php echo $__env->renderComponent(); ?>
@@ -164,14 +164,14 @@
 
     <?php if (isset($component)) { $__componentOriginaled2321f3593672d7b1b24c688bdda757 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginaled2321f3593672d7b1b24c688bdda757 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.testimonials.testimonials-section','data' => ['title' => 'Accélérez vos projets','subTitle' => 'Chez ScrewFast, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie.','testimonials' => $testimonials,'statistics' => $statistics]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.testimonials.testimonials-section','data' => ['title' => 'Un travail créatif qui fait progresser vos projets','subTitle' => 'Conçu autour de résultats créatifs concrets','testimonials' => $testimonials,'statistics' => $statistics]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.testimonials.testimonials-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Accélérez vos projets','subTitle' => 'Chez ScrewFast, nous assurons un démarrage rapide avec une configuration de compte instantanée. Découvrez la vitesse de la construction redéfinie.','testimonials' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($testimonials),'statistics' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($statistics)]); ?>
+<?php $component->withAttributes(['title' => 'Un travail créatif qui fait progresser vos projets','subTitle' => 'Conçu autour de résultats créatifs concrets','testimonials' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($testimonials),'statistics' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($statistics)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginaled2321f3593672d7b1b24c688bdda757)): ?>
@@ -227,14 +227,14 @@
 
     <?php if (isset($component)) { $__componentOriginal0a03e1af953e8affe1656c8e8c8791a6 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal0a03e1af953e8affe1656c8e8c8791a6 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section-alt','data' => ['title' => 'Construisons ensemble','subTitle' => 'ScrewFast est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI.','url' => '#!']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section-alt','data' => ['title' => 'Créons ensemble quelque chose qui inspire.','subTitle' => 'Vous avez une idée, une marque ou un projet en tête ? Donnons-lui vie sous une forme riche de sens, utile et conçue pour durer.','primaryBtn' => 'Démarrer un projet','primaryBtnURL' => '/fr/contact','secondaryBtn' => 'Contacter ColorSpire','secondaryBtnURL' => '/fr/contact']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.hero-section-alt'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Construisons ensemble','subTitle' => 'ScrewFast est un modèle open source, méticuleusement conçu avec les frameworks Astro, Tailwind CSS et Preline UI.','url' => '#!']); ?>
+<?php $component->withAttributes(['title' => 'Créons ensemble quelque chose qui inspire.','subTitle' => 'Vous avez une idée, une marque ou un projet en tête ? Donnons-lui vie sous une forme riche de sens, utile et conçue pour durer.','primaryBtn' => 'Démarrer un projet','primaryBtnURL' => '/fr/contact','secondaryBtn' => 'Contacter ColorSpire','secondaryBtnURL' => '/fr/contact']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal0a03e1af953e8affe1656c8e8c8791a6)): ?>
@@ -248,14 +248,14 @@
   <?php else: ?>
     <?php if (isset($component)) { $__componentOriginal8b82850521ad3ee867ba2b233314a5e4 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal8b82850521ad3ee867ba2b233314a5e4 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section','data' => ['title' => 'Equip Your Projects with <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>','subTitle' => 'Top-quality hardware tools and expert construction services for every project need.','primaryBtn' => 'Start Exploring','primaryBtnURL' => '/products','secondaryBtn' => 'Contact Sales Team','secondaryBtnURL' => '/contact','withReview' => true,'avatars' => $avatars,'rating' => '<span class="font-bold">4.8</span> / 5','starCount' => 4,'reviews' => 'From Over <span class="font-bold">12.8k</span> Reviews','src' => 'images/hero-image.avif','alt' => 'Stack of ScrewFast product boxes containing assorted hardware tools']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section','data' => ['title' => 'Designing Visual <span class="text-yellow-500 dark:text-yellow-400">Influence.</span>','subTitle' => 'ColorSpire Creations helps businesses, organizations and ambitious individuals turn ideas into strong visual identities, compelling content and digital experiences that are built to make an impact.','primaryBtn' => 'Start a Project','primaryBtnURL' => '/contact','secondaryBtn' => 'Explore Our Work','secondaryBtnURL' => '/portfolio','withReview' => true,'avatars' => $avatars,'rating' => '<span class="font-bold">4.5</span>','starCount' => 4,'reviews' => '<span class="font-bold">Very Excellent services!</span>','src' => 'images/hero-image.avif','alt' => 'ColorSpire Creations visual design and digital experiences']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.hero-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Equip Your Projects with <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>','subTitle' => 'Top-quality hardware tools and expert construction services for every project need.','primaryBtn' => 'Start Exploring','primaryBtnURL' => '/products','secondaryBtn' => 'Contact Sales Team','secondaryBtnURL' => '/contact','withReview' => true,'avatars' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($avatars),'rating' => '<span class="font-bold">4.8</span> / 5','starCount' => 4,'reviews' => 'From Over <span class="font-bold">12.8k</span> Reviews','src' => 'images/hero-image.avif','alt' => 'Stack of ScrewFast product boxes containing assorted hardware tools']); ?>
+<?php $component->withAttributes(['title' => 'Designing Visual <span class="text-yellow-500 dark:text-yellow-400">Influence.</span>','subTitle' => 'ColorSpire Creations helps businesses, organizations and ambitious individuals turn ideas into strong visual identities, compelling content and digital experiences that are built to make an impact.','primaryBtn' => 'Start a Project','primaryBtnURL' => '/contact','secondaryBtn' => 'Explore Our Work','secondaryBtnURL' => '/portfolio','withReview' => true,'avatars' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($avatars),'rating' => '<span class="font-bold">4.5</span>','starCount' => 4,'reviews' => '<span class="font-bold">Very Excellent services!</span>','src' => 'images/hero-image.avif','alt' => 'ColorSpire Creations visual design and digital experiences']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal8b82850521ad3ee867ba2b233314a5e4)): ?>
@@ -269,14 +269,14 @@
 
     <?php if (isset($component)) { $__componentOriginalf3f06e19bdd700d96fbecb3fe1c301eb = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalf3f06e19bdd700d96fbecb3fe1c301eb = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.clients-section','data' => ['title' => 'Trusted by Industry Leaders','subTitle' => 'Experience the reliability chosen by industry giants.','partners' => $partners]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.clients-section','data' => ['title' => 'Built to Help Brands Communicate Better','subTitle' => 'From visual design to digital experiences, ColorSpire brings strategy, creativity and execution together. [VERIFIED PARTNERS]','partners' => $partners]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.clients-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Trusted by Industry Leaders','subTitle' => 'Experience the reliability chosen by industry giants.','partners' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($partners)]); ?>
+<?php $component->withAttributes(['title' => 'Built to Help Brands Communicate Better','subTitle' => 'From visual design to digital experiences, ColorSpire brings strategy, creativity and execution together. [VERIFIED PARTNERS]','partners' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($partners)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginalf3f06e19bdd700d96fbecb3fe1c301eb)): ?>
@@ -290,14 +290,14 @@
 
     <?php if (isset($component)) { $__componentOriginal05aa5c1b310d3deca2315a7d82ec4fb3 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal05aa5c1b310d3deca2315a7d82ec4fb3 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-general','data' => ['title' => 'Meeting Industry Demands','subTitle' => 'At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we\'re dedicated to helping you overcome obstacles and achieve your goals.','src' => 'images/features-image.avif','alt' => 'ScrewFast products in floating boxes','features' => $features]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-general','data' => ['title' => 'Creative Solutions for Brands That Want to Be Taken Seriously','subTitle' => 'Your brand is more than a logo, and your website is more than a collection of pages. We combine design, content and technology to help you communicate clearly, look professional and build stronger digital touchpoints.','src' => 'images/features-image.avif','alt' => 'ColorSpire Creations creative capability showcase','features' => $features]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.features.features-general'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Meeting Industry Demands','subTitle' => 'At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we\'re dedicated to helping you overcome obstacles and achieve your goals.','src' => 'images/features-image.avif','alt' => 'ScrewFast products in floating boxes','features' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($features)]); ?>
+<?php $component->withAttributes(['title' => 'Creative Solutions for Brands That Want to Be Taken Seriously','subTitle' => 'Your brand is more than a logo, and your website is more than a collection of pages. We combine design, content and technology to help you communicate clearly, look professional and build stronger digital touchpoints.','src' => 'images/features-image.avif','alt' => 'ColorSpire Creations creative capability showcase','features' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($features)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal05aa5c1b310d3deca2315a7d82ec4fb3)): ?>
@@ -311,29 +311,29 @@
 
     <?php if (isset($component)) { $__componentOriginalc91e2e789fc6bca47da051e62a101d20 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalc91e2e789fc6bca47da051e62a101d20 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-navs','data' => ['title' => 'Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>&apos;s offerings to perfectly suit your hardware and construction needs.','tabs' => [
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.features.features-navs','data' => ['title' => 'Everything You Need to Build a <span class="text-yellow-500 dark:text-yellow-400">Stronger Digital Presence</span>','tabs' => [
         [
-          'heading' => 'Cutting-Edge Tools',
-          'content' => 'Empower your projects with ScrewFast\'s cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.',
+          'heading' => 'Creative Strategy',
+          'content' => 'Turn Ideas Into Work People Can See, Understand and Remember — We start with what you are trying to achieve, then shape the visual direction around the message, audience and desired outcome. [Build My Brand]',
           'svg' => 'tools',
           'src' => 'images/automated-tools.avif',
-          'alt' => 'Yellow and black heavy equipment on brown grass field',
+          'alt' => 'Creative Strategy visual direction',
           'first' => true,
         ],
         [
-          'heading' => 'Intuitive Dashboards',
-          'content' => 'Navigate with ease using ScrewFast\'s intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.',
+          'heading' => 'Digital Experiences',
+          'content' => 'Websites Built Around People, Not Just Screens — We create responsive digital experiences that make it easier for visitors to understand your offer, trust your business and take the next step. [Start a Website Project]',
           'svg' => 'dashboard',
           'src' => 'images/dashboard-image.avif',
-          'alt' => 'A screenshot or graphic representation of the intuitive dashboard',
+          'alt' => 'Responsive digital experiences and modern websites',
           'second' => true,
         ],
         [
-          'heading' => 'Robust Features',
-          'content' => 'Minimize complexity, maximize productivity. ScrewFast\'s robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.',
+          'heading' => 'Content & Social',
+          'content' => 'Keep Your Brand Visible Without Losing Its Identity — From social graphics to campaign content, we help brands create a recognizable visual presence across the platforms where their audiences spend time. [Plan My Content]',
           'svg' => 'house',
           'src' => 'images/construction-image.avif',
-          'alt' => 'Gray metal building frame near tower crane during daytime',
+          'alt' => 'Content creation and social media visuals',
         ],
       ]]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.features.features-navs'); ?>
@@ -342,29 +342,29 @@
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>&apos;s offerings to perfectly suit your hardware and construction needs.','tabs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute([
+<?php $component->withAttributes(['title' => 'Everything You Need to Build a <span class="text-yellow-500 dark:text-yellow-400">Stronger Digital Presence</span>','tabs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute([
         [
-          'heading' => 'Cutting-Edge Tools',
-          'content' => 'Empower your projects with ScrewFast\'s cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.',
+          'heading' => 'Creative Strategy',
+          'content' => 'Turn Ideas Into Work People Can See, Understand and Remember — We start with what you are trying to achieve, then shape the visual direction around the message, audience and desired outcome. [Build My Brand]',
           'svg' => 'tools',
           'src' => 'images/automated-tools.avif',
-          'alt' => 'Yellow and black heavy equipment on brown grass field',
+          'alt' => 'Creative Strategy visual direction',
           'first' => true,
         ],
         [
-          'heading' => 'Intuitive Dashboards',
-          'content' => 'Navigate with ease using ScrewFast\'s intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.',
+          'heading' => 'Digital Experiences',
+          'content' => 'Websites Built Around People, Not Just Screens — We create responsive digital experiences that make it easier for visitors to understand your offer, trust your business and take the next step. [Start a Website Project]',
           'svg' => 'dashboard',
           'src' => 'images/dashboard-image.avif',
-          'alt' => 'A screenshot or graphic representation of the intuitive dashboard',
+          'alt' => 'Responsive digital experiences and modern websites',
           'second' => true,
         ],
         [
-          'heading' => 'Robust Features',
-          'content' => 'Minimize complexity, maximize productivity. ScrewFast\'s robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.',
+          'heading' => 'Content & Social',
+          'content' => 'Keep Your Brand Visible Without Losing Its Identity — From social graphics to campaign content, we help brands create a recognizable visual presence across the platforms where their audiences spend time. [Plan My Content]',
           'svg' => 'house',
           'src' => 'images/construction-image.avif',
-          'alt' => 'Gray metal building frame near tower crane during daytime',
+          'alt' => 'Content creation and social media visuals',
         ],
       ])]); ?>
 <?php echo $__env->renderComponent(); ?>
@@ -380,14 +380,14 @@
 
     <?php if (isset($component)) { $__componentOriginaled2321f3593672d7b1b24c688bdda757 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginaled2321f3593672d7b1b24c688bdda757 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.testimonials.testimonials-section','data' => ['title' => 'Fast-Track Your Projects','subTitle' => 'At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined.','testimonials' => $testimonials,'statistics' => $statistics]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.testimonials.testimonials-section','data' => ['title' => 'Creative Work That Moves Projects Forward','subTitle' => 'Built Around Real Creative Outcomes','testimonials' => $testimonials,'statistics' => $statistics]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.testimonials.testimonials-section'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Fast-Track Your Projects','subTitle' => 'At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined.','testimonials' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($testimonials),'statistics' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($statistics)]); ?>
+<?php $component->withAttributes(['title' => 'Creative Work That Moves Projects Forward','subTitle' => 'Built Around Real Creative Outcomes','testimonials' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($testimonials),'statistics' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($statistics)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginaled2321f3593672d7b1b24c688bdda757)): ?>
@@ -422,14 +422,14 @@
 
     <?php if (isset($component)) { $__componentOriginal11c68d59fc7233bcd1d371861aa4b6c3 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal11c68d59fc7233bcd1d371861aa4b6c3 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.misc.faq','data' => ['title' => 'Frequently<br />asked questions','faqs' => $faqs]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.misc.faq','data' => ['title' => 'Frequently<br />Asked Questions','faqs' => $faqs]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.misc.faq'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Frequently<br />asked questions','faqs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($faqs)]); ?>
+<?php $component->withAttributes(['title' => 'Frequently<br />Asked Questions','faqs' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($faqs)]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal11c68d59fc7233bcd1d371861aa4b6c3)): ?>
@@ -443,14 +443,14 @@
 
     <?php if (isset($component)) { $__componentOriginal0a03e1af953e8affe1656c8e8c8791a6 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal0a03e1af953e8affe1656c8e8c8791a6 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section-alt','data' => ['title' => 'Let\'s Build Together','subTitle' => 'ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks.','url' => '#!']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sections.landing.hero-section-alt','data' => ['title' => 'Let’s Create Something That Inspires.','subTitle' => 'Have an idea, a brand or a project in mind? Let’s turn it into something meaningful, useful and built to last.','primaryBtn' => 'Start a Project','primaryBtnURL' => '/contact','secondaryBtn' => 'Contact ColorSpire','secondaryBtnURL' => '/contact']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('sections.landing.hero-section-alt'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['title' => 'Let\'s Build Together','subTitle' => 'ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks.','url' => '#!']); ?>
+<?php $component->withAttributes(['title' => 'Let’s Create Something That Inspires.','subTitle' => 'Have an idea, a brand or a project in mind? Let’s turn it into something meaningful, useful and built to last.','primaryBtn' => 'Start a Project','primaryBtnURL' => '/contact','secondaryBtn' => 'Contact ColorSpire','secondaryBtnURL' => '/contact']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal0a03e1af953e8affe1656c8e8c8791a6)): ?>

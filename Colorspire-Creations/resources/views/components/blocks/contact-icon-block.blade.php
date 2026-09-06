@@ -34,5 +34,8 @@
         @endif
       </a>
     @endif
+    @isset($extra)
+      {{ $extra }}
+    @endisset
   </div>
 </div>

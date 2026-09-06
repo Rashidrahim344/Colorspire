@@ -8,7 +8,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
   class="sticky inset-x-0 top-4 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start"
 >
   <nav
-    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
+    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 md:min-h-[70px] lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -73,13 +73,27 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
           <x-links.nav-link :url="$link['url']" :name="$link['name']" />
         @endforeach
 
-        <x-buttons.login-btn />
-        <x-forms.login-modal />
-        <x-forms.register-modal />
-        <x-forms.recover-modal />
+        @php
+        $ctaUrl = $locale === 'fr' ? '/fr/contact' : '/contact';
+        $ctaLabel = $locale === 'fr' ? 'Démarrer un projet' : 'Start a Project';
+        @endphp
+        <a
+          href="{{ $ctaUrl }}"
+          class="inline-flex items-center justify-center gap-x-2 rounded-full bg-yellow-400 px-3.5 py-1.5 text-sm font-semibold text-neutral-800 transition duration-300 hover:bg-yellow-500 focus:outline-hidden dark:bg-yellow-500 dark:text-neutral-900 dark:hover:bg-yellow-400"
+        >
+          {{ $ctaLabel }}
+        </a>
 
-        <x-language-picker />
-        <span class="hidden md:inline-block">
+        {{-- Authentication & Language Picker (Hidden) --}}
+        <div class="hidden" aria-hidden="true">
+          <x-buttons.login-btn />
+          <x-forms.login-modal />
+          <x-forms.register-modal />
+          <x-forms.recover-modal />
+          <x-language-picker />
+        </div>
+
+        <span class="hidden md:inline-flex md:items-center md:border-s md:border-neutral-300 md:ps-4 lg:ps-6 dark:border-neutral-700">
           <x-theme-icon />
         </span>
       </div>

@@ -2,10 +2,10 @@
 $locale = app()->getLocale();
 $nav = \App\Services\ContentService::getNavigation($locale);
 $site = \App\Services\ContentService::getSite();
-$sectionThreeTitle = $locale === 'fr' ? 'Rester à jour' : 'Stay up to date';
+$sectionThreeTitle = $locale === 'fr' ? 'Bulletin d\'information' : 'Newsletter';
 $sectionThreeContent = $locale === 'fr'
-    ? 'Restez informé des derniers outils et des offres exclusives.'
-    : 'Stay updated with the latest tools and exclusive deals.';
+    ? 'Recevez des conseils créatifs et numériques pratiques de ColorSpire.'
+    : 'Get practical creative and digital insights from ColorSpire.';
 $crafted = $locale === 'fr' ? 'Fabriqué par' : 'Crafted by';
 ?>
 
@@ -52,11 +52,6 @@ $crafted = $locale === 'fr' ? 'Fabriqué par' : 'Crafted by';
                   <?php echo e($link['name']); ?>
 
                 </a>
-                <?php if($section['section'] === 'Company' && $index === 2): ?>
-                  <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
-                    We're hiring!
-                  </span>
-                <?php endif; ?>
               </li>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </ul>
@@ -103,14 +98,8 @@ $crafted = $locale === 'fr' ? 'Fabriqué par' : 'Crafted by';
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"><?php echo e(date('Y')); ?></span>
-          <?php echo e($site['title']); ?>. <?php echo e($crafted); ?>
+          © 2024 <?php echo e($site['title']); ?>. <?php echo e($locale === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'); ?>
 
-          <a
-            class="rounded-lg font-medium underline underline-offset-2 ring-zinc-500 outline-hidden transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://github.com/mearashadowfax"
-            rel="noopener noreferrer">Gulamov</a> • Distributed by <a class="rounded-lg font-medium ring-zinc-500 outline-hidden transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:hover:text-neutral-300 underline" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-          .
         </p>
       </div>
 

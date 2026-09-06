@@ -8,7 +8,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
   class="sticky inset-x-0 top-4 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start"
 >
   <nav
-    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
+    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 md:min-h-[70px] lg:px-8 xl:mx-auto dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -130,7 +130,21 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-        <?php if (isset($component)) { $__componentOriginal36c20a77bba8e86771a76a9b6c5ea9a3 = $component; } ?>
+        <?php
+        $ctaUrl = $locale === 'fr' ? '/fr/contact' : '/contact';
+        $ctaLabel = $locale === 'fr' ? 'Démarrer un projet' : 'Start a Project';
+        ?>
+        <a
+          href="<?php echo e($ctaUrl); ?>"
+          class="inline-flex items-center justify-center gap-x-2 rounded-full bg-yellow-400 px-3.5 py-1.5 text-sm font-semibold text-neutral-800 transition duration-300 hover:bg-yellow-500 focus:outline-hidden dark:bg-yellow-500 dark:text-neutral-900 dark:hover:bg-yellow-400"
+        >
+          <?php echo e($ctaLabel); ?>
+
+        </a>
+
+        
+        <div class="hidden" aria-hidden="true">
+          <?php if (isset($component)) { $__componentOriginal36c20a77bba8e86771a76a9b6c5ea9a3 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal36c20a77bba8e86771a76a9b6c5ea9a3 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.buttons.login-btn','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('buttons.login-btn'); ?>
@@ -150,7 +164,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php $component = $__componentOriginal36c20a77bba8e86771a76a9b6c5ea9a3; ?>
 <?php unset($__componentOriginal36c20a77bba8e86771a76a9b6c5ea9a3); ?>
 <?php endif; ?>
-        <?php if (isset($component)) { $__componentOriginalc2ef5557d983887f2650fd998e61338a = $component; } ?>
+          <?php if (isset($component)) { $__componentOriginalc2ef5557d983887f2650fd998e61338a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalc2ef5557d983887f2650fd998e61338a = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.forms.login-modal','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('forms.login-modal'); ?>
@@ -170,7 +184,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php $component = $__componentOriginalc2ef5557d983887f2650fd998e61338a; ?>
 <?php unset($__componentOriginalc2ef5557d983887f2650fd998e61338a); ?>
 <?php endif; ?>
-        <?php if (isset($component)) { $__componentOriginal97bd9bcca9e48742865350bd56734687 = $component; } ?>
+          <?php if (isset($component)) { $__componentOriginal97bd9bcca9e48742865350bd56734687 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal97bd9bcca9e48742865350bd56734687 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.forms.register-modal','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('forms.register-modal'); ?>
@@ -190,7 +204,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php $component = $__componentOriginal97bd9bcca9e48742865350bd56734687; ?>
 <?php unset($__componentOriginal97bd9bcca9e48742865350bd56734687); ?>
 <?php endif; ?>
-        <?php if (isset($component)) { $__componentOriginal66db51320f8a8b72c0bbed610b8a963c = $component; } ?>
+          <?php if (isset($component)) { $__componentOriginal66db51320f8a8b72c0bbed610b8a963c = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal66db51320f8a8b72c0bbed610b8a963c = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.forms.recover-modal','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('forms.recover-modal'); ?>
@@ -210,8 +224,7 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php $component = $__componentOriginal66db51320f8a8b72c0bbed610b8a963c; ?>
 <?php unset($__componentOriginal66db51320f8a8b72c0bbed610b8a963c); ?>
 <?php endif; ?>
-
-        <?php if (isset($component)) { $__componentOriginal9a51d0a89a46dde14c3150b290e44ced = $component; } ?>
+          <?php if (isset($component)) { $__componentOriginal9a51d0a89a46dde14c3150b290e44ced = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal9a51d0a89a46dde14c3150b290e44ced = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.language-picker','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('language-picker'); ?>
@@ -231,7 +244,9 @@ $homeUrl = $locale === 'fr' ? '/fr' : '/';
 <?php $component = $__componentOriginal9a51d0a89a46dde14c3150b290e44ced; ?>
 <?php unset($__componentOriginal9a51d0a89a46dde14c3150b290e44ced); ?>
 <?php endif; ?>
-        <span class="hidden md:inline-block">
+        </div>
+
+        <span class="hidden md:inline-flex md:items-center md:border-s md:border-neutral-300 md:ps-4 lg:ps-6 dark:border-neutral-700">
           <?php if (isset($component)) { $__componentOriginal0a51a9e3cb2aa0da1f441cd3fde95ac5 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal0a51a9e3cb2aa0da1f441cd3fde95ac5 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.theme-icon','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
