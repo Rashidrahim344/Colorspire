@@ -1,0 +1,14 @@
+@props([
+    'heading' => '',
+    'content' => '',
+])
+
+<div class="flex gap-x-5">
+  {{ $slot }}
+  <div class="grow">
+    <h3 class="text-balance text-lg font-bold text-neutral-800 dark:text-neutral-200">
+      {{ $heading }}
+    </h3>
+    <p class="mt-1 text-pretty text-neutral-700 dark:text-neutral-300">{{ $content }}</p>
+  </div>
+</div>
