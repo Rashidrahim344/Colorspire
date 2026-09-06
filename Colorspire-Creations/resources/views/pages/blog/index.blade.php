@@ -1,5 +1,5 @@
 @php
-$pageTitle = "Blog | {$site['title']}";
+$pageTitle = ($locale === 'fr' ? 'Perspectives' : 'Insights') . " | {$site['title']}";
 @endphp
 
 <x-layouts.app

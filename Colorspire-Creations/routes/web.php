@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HubController;
 use App\Http\Controllers\InsightController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 // English routes (default)
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/hub', [HubController::class, 'index'])->name('hub');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
@@ -28,6 +34,18 @@ Route::prefix('fr')->name('fr.')->group(function () {
     Route::get('/services', function () {
         return app(ServiceController::class)->index(request(), 'fr');
     })->name('services');
+
+    Route::get('/portfolio', function () {
+        return app(PortfolioController::class)->index(request(), 'fr');
+    })->name('portfolio');
+
+    Route::get('/hub', function () {
+        return app(HubController::class)->index(request(), 'fr');
+    })->name('hub');
+
+    Route::get('/about', function () {
+        return app(AboutController::class)->index(request(), 'fr');
+    })->name('about');
 
     Route::get('/products', function () {
         return app(ProductController::class)->index(request(), 'fr');
@@ -57,3 +75,4 @@ Route::prefix('fr')->name('fr.')->group(function () {
         return app(ContactController::class)->store(request(), 'fr');
     })->name('contact.store');
 });
+

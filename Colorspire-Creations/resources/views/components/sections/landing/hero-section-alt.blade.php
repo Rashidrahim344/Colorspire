@@ -2,10 +2,14 @@
     'title',
     'subTitle' => null,
     'url' => null,
+    'primaryBtn' => null,
+    'primaryBtnURL' => '#',
+    'secondaryBtn' => null,
+    'secondaryBtnURL' => '#',
 ])
 
 @php
-$btnTitle = app()->getLocale() === 'fr' ? 'Continuer avec Github' : 'Continue with Github';
+$btnTitle = app()->getLocale() === 'fr' ? 'Démarrer un projet' : 'Start a Project';
 @endphp
 
 <section
@@ -122,7 +126,16 @@ $btnTitle = app()->getLocale() === 'fr' ? 'Continuer avec Github' : 'Continue wi
       </p>
     @endif
   </div>
-  @if($url)
+  @if($primaryBtn || $secondaryBtn)
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      @if($primaryBtn)
+        <x-buttons.primary-cta :title="$primaryBtn" :url="$primaryBtnURL" />
+      @endif
+      @if($secondaryBtn)
+        <x-buttons.secondary-cta :title="$secondaryBtn" :url="$secondaryBtnURL" />
+      @endif
+    </div>
+  @elseif($url)
     <div class="mt-8 flex justify-center gap-3">
       <x-buttons.github-btn :url="$url" :title="$btnTitle" />
     </div>

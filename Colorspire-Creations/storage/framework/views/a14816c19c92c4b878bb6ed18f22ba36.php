@@ -5,6 +5,10 @@ $__propNames = \Illuminate\View\ComponentAttributeBag::extractPropNames(([
     'title',
     'subTitle' => null,
     'url' => null,
+    'primaryBtn' => null,
+    'primaryBtnURL' => '#',
+    'secondaryBtn' => null,
+    'secondaryBtnURL' => '#',
 ]));
 
 foreach ($attributes->all() as $__key => $__value) {
@@ -24,6 +28,10 @@ foreach (array_filter(([
     'title',
     'subTitle' => null,
     'url' => null,
+    'primaryBtn' => null,
+    'primaryBtnURL' => '#',
+    'secondaryBtn' => null,
+    'secondaryBtnURL' => '#',
 ]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 }
@@ -37,7 +45,7 @@ foreach ($attributes->all() as $__key => $__value) {
 unset($__defined_vars); ?>
 
 <?php
-$btnTitle = app()->getLocale() === 'fr' ? 'Continuer avec Github' : 'Continue with Github';
+$btnTitle = app()->getLocale() === 'fr' ? 'Démarrer un projet' : 'Start a Project';
 ?>
 
 <section
@@ -156,7 +164,54 @@ $btnTitle = app()->getLocale() === 'fr' ? 'Continuer avec Github' : 'Continue wi
       </p>
     <?php endif; ?>
   </div>
-  <?php if($url): ?>
+  <?php if($primaryBtn || $secondaryBtn): ?>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <?php if($primaryBtn): ?>
+        <?php if (isset($component)) { $__componentOriginalc195594364a586cb1e89cd7db6efa1e4 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalc195594364a586cb1e89cd7db6efa1e4 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.buttons.primary-cta','data' => ['title' => $primaryBtn,'url' => $primaryBtnURL]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('buttons.primary-cta'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['title' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($primaryBtn),'url' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($primaryBtnURL)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalc195594364a586cb1e89cd7db6efa1e4)): ?>
+<?php $attributes = $__attributesOriginalc195594364a586cb1e89cd7db6efa1e4; ?>
+<?php unset($__attributesOriginalc195594364a586cb1e89cd7db6efa1e4); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc195594364a586cb1e89cd7db6efa1e4)): ?>
+<?php $component = $__componentOriginalc195594364a586cb1e89cd7db6efa1e4; ?>
+<?php unset($__componentOriginalc195594364a586cb1e89cd7db6efa1e4); ?>
+<?php endif; ?>
+      <?php endif; ?>
+      <?php if($secondaryBtn): ?>
+        <?php if (isset($component)) { $__componentOriginal5deb6f71b9a2baa14baea84636213375 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal5deb6f71b9a2baa14baea84636213375 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.buttons.secondary-cta','data' => ['title' => $secondaryBtn,'url' => $secondaryBtnURL]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('buttons.secondary-cta'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['title' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($secondaryBtn),'url' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($secondaryBtnURL)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal5deb6f71b9a2baa14baea84636213375)): ?>
+<?php $attributes = $__attributesOriginal5deb6f71b9a2baa14baea84636213375; ?>
+<?php unset($__attributesOriginal5deb6f71b9a2baa14baea84636213375); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal5deb6f71b9a2baa14baea84636213375)): ?>
+<?php $component = $__componentOriginal5deb6f71b9a2baa14baea84636213375; ?>
+<?php unset($__componentOriginal5deb6f71b9a2baa14baea84636213375); ?>
+<?php endif; ?>
+      <?php endif; ?>
+    </div>
+  <?php elseif($url): ?>
     <div class="mt-8 flex justify-center gap-3">
       <?php if (isset($component)) { $__componentOriginalc4adad1ab65ad015359bdff523b3b9c0 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalc4adad1ab65ad015359bdff523b3b9c0 = $attributes; } ?>

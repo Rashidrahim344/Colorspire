@@ -1,32 +1,82 @@
 @php
 $isFr = app()->getLocale() === 'fr';
 
-$title = $isFr ? 'Contactez-nous' : 'Contact us';
+$title = $isFr ? 'Parlons de ce que vous construisez' : "Let's Talk About What You're Building";
 $subTitle = $isFr
-  ? "Vous avez des questions ou souhaitez discuter d'un projet ? Contactez-nous et laissons-nous élaborer la solution parfaite avec nos outils et services."
-  : "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-$formTitle = $isFr ? 'Remplissez le formulaire ci-dessous' : 'Fill in the form below';
+  ? "Dites-nous ce dont vous avez besoin, ce que vous essayez d'accomplir et quand vous en avez besoin. Nous utiliserons ces informations pour comprendre le projet et recommander la prochaine étape."
+  : "Tell us what you need, what you are trying to achieve and when you need it. We'll use that information to understand the project and recommend the next step.";
+$formTitle = $isFr ? 'Formulaire de demande de projet' : 'Project Inquiry Form';
 $formSubTitle = $isFr
-  ? 'Nous vous répondrons dans un délai de 1 à 2 jours ouvrables.'
-  : "We'll get back to you in 1-2 business days.";
-$firstName = $isFr ? 'Prénom' : 'First Name';
-$lastName = $isFr ? 'Nom' : 'Last Name';
-$details = $isFr ? 'Détails' : 'Details';
-$sendBtn = $isFr ? 'Envoyer un message' : 'Send Message';
+  ? "Merci de nous contacter. Votre demande de projet a été reçue. Nous examinerons les détails et vous répondrons via les coordonnées fournies."
+  : "Thanks for reaching out. Your project inquiry has been received. We'll review the details and get back to you through the contact information you provided.";
+$fullName = $isFr ? 'Nom complet' : 'Full Name';
+$organization = $isFr ? 'Organisation / Entreprise' : 'Organization (Optional)';
+$details = $isFr ? 'Brief du projet (objectifs, livrables, délais)' : 'Project Brief (goals, deliverables, timeline)';
+$sendBtn = $isFr ? 'Envoyer la demande de projet' : 'Send Project Inquiry';
 
-$kbHeading = $isFr ? 'Base de connaissances' : 'Knowledgebase';
-$kbContent = $isFr ? 'Parcourez tous nos articles de base de connaissances.' : 'Browse through all of our knowledgebase articles.';
-$kbLink = $isFr ? 'Visiter les guides et tutoriels' : 'Visit guides & tutorials';
+$phoneHeading = $isFr ? 'Téléphone & WhatsApp' : 'Phone & WhatsApp';
+$phoneContent = $isFr ? 'Contactez-nous directement pour toute demande ou échange rapide :' : 'Reach out directly for inquiries or quick discussions:';
+$whatsappLabel = 'WhatsApp';
+$whatsappNumber = '+260 763 505 811';
+$whatsappUrl = 'https://wa.me/260763505811';
+$callsLabel = $isFr ? 'Appels' : 'Calls';
+$callNumber = '+260 777 371 736';
+$callUrl = 'tel:+260777371736';
 
-$faqHeading = 'FAQ';
-$faqContent = $isFr ? 'Explorez notre FAQ pour des réponses rapides et claires aux questions courantes.' : 'Explore our FAQ for quick, clear answers to common queries.';
-$faqLink = $isFr ? 'Visiter la FAQ' : 'Visit FAQ';
+$emailHeading = $isFr ? 'Contactez-nous par e-mail' : 'Contact Us by Email';
+$emailContent = $isFr ? 'Vous préférez échanger par e-mail direct ? Écrivez-nous à' : 'Prefer direct written communication? Drop us an email at';
+$emailAddress = 'colorspirecreations@gmail.com';
 
-$officeHeading = $isFr ? 'Visitez notre bureau' : 'Visit our office';
-$officeBrand = $isFr ? 'ScrewFast UK' : 'UK ScrewFast';
+$serviceLabel = $isFr ? 'Service souhaité' : 'Service Needed';
+$servicePlaceholder = $isFr ? 'Sélectionnez un service...' : 'Select a Service...';
+$servicesList = $isFr ? [
+    'Design graphique' => 'Design graphique',
+    'Branding & Identité' => 'Branding & Identité de marque',
+    'Site Web & Développement' => 'Conception & Dév. Web',
+    'Création de contenu' => 'Création de contenu',
+    'Gestion des réseaux sociaux' => 'Gestion des réseaux sociaux',
+    'Marketing digital' => 'Marketing digital',
+    'Photographie & Vidéo' => 'Photographie & Vidéo',
+    'Autre / Projet complet' => 'Autre / Projet complet',
+] : [
+    'Graphic Design' => 'Graphic Design',
+    'Branding & Identity' => 'Branding & Identity',
+    'Website Design & Dev' => 'Website Design & Development',
+    'Content Creation' => 'Content Creation',
+    'Social Media Management' => 'Social Media Management',
+    'Digital Marketing' => 'Digital Marketing',
+    'Photography & Video' => 'Photography & Video',
+    'Other / Comprehensive' => 'Other / Comprehensive Project',
+];
 
-$emailHeading = $isFr ? 'Contactez-nous par e-mail' : 'Contact us by email';
-$emailContent = $isFr ? 'Préférez-vous le texte écrit ? Envoyez-nous un e-mail à' : 'Prefer the written word? Drop us an email at';
+$budgetLabel = $isFr ? 'Budget estimé' : 'Estimated Budget';
+$budgetPlaceholder = $isFr ? 'Fourchette budgétaire...' : 'Select Budget Range...';
+$budgetList = $isFr ? [
+    'Moins de $250' => 'Moins de K250',
+    '$250 - $500' => 'K250 – K500',
+    '$500 - $1,000' => 'K500 – K1 000',
+    '$1,000 - $2,500' => 'K1,000 – K2,500',
+    '$2,500+' => 'Plus de K2,500',
+    'Flexible' => 'Flexible / À discuter',
+] : [
+    'Under $250' => 'Under K250',
+    '$250 - $500' => 'K250 – K500',
+    '$500 - $1,000' => 'K500 – K1 000',
+    '$1,000 - $2,500' => 'K1,000 – K2,500',
+    '$2,500+' => 'K2,500+',
+    'Flexible' => 'Flexible / Discuss Later',
+];
+
+$hoursHeading = $isFr ? 'Heures d\'ouverture' : 'Business Hours';
+$hoursContent = $isFr ? 'Nous sommes disponibles pour vous accompagner aux horaires suivants :' : 'We are available to assist you during the following hours:';
+$weekdayLabel = $isFr ? 'Lundi - Vendredi' : 'Monday - Friday';
+$weekdayHours = '7:00 AM - 7:30 PM';
+$saturdayLabel = $isFr ? 'Samedi' : 'Saturday';
+$saturdayHours = '8:00 AM - 1:00 PM';
+
+$officeHeading = $isFr ? 'Notre Studio' : 'Our Studio';
+$officeBrand = 'ColorSpire Creations';
+$officeAddress = $isFr ? 'Livingstone, Zambie — Clients locaux, régionaux et internationaux' : 'Mosi - Oa - Tunya Road, Livingstone 10101';
 @endphp
 
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
@@ -49,79 +99,271 @@ $emailContent = $isFr ? 'Préférez-vous le texte écrit ? Envoyez-nous un e-mai
         >
           {{ $formTitle }}
         </h2>
-        <form>
+        <form id="project-inquiry-form">
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <x-forms.input.text-input
                 id="hs-firstname-contacts"
-                :label="$firstName"
+                :label="$fullName"
                 name="hs-firstname-contacts"
+                required
               />
               <x-forms.input.text-input
                 id="hs-lastname-contacts"
-                :label="$lastName"
+                :label="$organization"
                 name="hs-lastname-contacts"
               />
             </div>
             <x-forms.input.email-contact-input id="hs-email-contacts" />
             <x-forms.input.phone-input id="hs-phone-number" />
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <x-forms.input.select-input
+                id="hs-service-contacts"
+                name="hs-service-contacts"
+                :label="$serviceLabel"
+                :placeholder="$servicePlaceholder"
+                :options="$servicesList"
+              />
+              <x-forms.input.select-input
+                id="hs-budget-contacts"
+                name="hs-budget-contacts"
+                :label="$budgetLabel"
+                :placeholder="$budgetPlaceholder"
+                :options="$budgetList"
+              />
+            </div>
             <x-forms.input.text-area-input
               id="hs-about-contacts"
               :label="$details"
               name="hs-about-contacts"
+              required
             />
           </div>
 
           <div class="mt-4 grid">
             <x-buttons.auth-btn :title="$sendBtn" />
           </div>
-
-          <div class="mt-3 text-center">
-            <p class="text-sm text-neutral-600 dark:text-neutral-400">
-              {{ $formSubTitle }}
-            </p>
-          </div>
         </form>
       </div>
 
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <x-blocks.contact-icon-block
-          :heading="$kbHeading"
-          :content="$kbContent"
-          :isLinkVisible="true"
-          :linkTitle="$kbLink"
-          linkURL="#"
-          :isArrowVisible="true"
-        ><x-icon name="question" />
-        </x-blocks.contact-icon-block>
-
-        <x-blocks.contact-icon-block
-          :heading="$faqHeading"
-          :content="$faqContent"
-          :isLinkVisible="true"
-          :linkTitle="$faqLink"
-          linkURL="#"
-          :isArrowVisible="true"
-        ><x-icon name="chatBubble" />
-        </x-blocks.contact-icon-block>
-
-        <x-blocks.contact-icon-block
-          :heading="$officeHeading"
-          :content="$officeBrand"
-          :isAddressVisible="true"
-          addressContent="72 Union Terrace, E10 4PE London"
-        ><x-icon name="mapPin" />
+          :heading="$phoneHeading"
+          :content="$phoneContent"
+        >
+          <x-icon name="phone" />
+          <x-slot:extra>
+            <div class="mt-2 space-y-1.5 text-sm">
+              <div class="flex items-center gap-x-2">
+                <span class="font-medium text-neutral-700 dark:text-neutral-300">{{ $whatsappLabel }}:</span>
+                <a
+                  class="group inline-flex items-center gap-x-1.5 font-medium text-zinc-600 transition duration-300 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                  href="{{ $whatsappUrl }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>{{ $whatsappNumber }}</span>
+                  <svg class="h-3.5 w-3.5 shrink-0 transition ease-in-out group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+              <div class="flex items-center gap-x-2">
+                <span class="font-medium text-neutral-700 dark:text-neutral-300">{{ $callsLabel }}:</span>
+                <a
+                  class="group inline-flex items-center gap-x-1.5 font-medium text-zinc-600 transition duration-300 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                  href="{{ $callUrl }}"
+                >
+                  <span>{{ $callNumber }}</span>
+                  <svg class="h-3.5 w-3.5 shrink-0 transition ease-in-out group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </x-slot:extra>
         </x-blocks.contact-icon-block>
 
         <x-blocks.contact-icon-block
           :heading="$emailHeading"
           :content="$emailContent"
           :isLinkVisible="true"
-          linkTitle="support@screwfast.uk"
-          linkURL="#"
+          :linkTitle="$emailAddress"
+          :linkURL="'mailto:' . $emailAddress"
         ><x-icon name="envelopeOpen" />
+        </x-blocks.contact-icon-block>
+
+        <x-blocks.contact-icon-block
+          :heading="$hoursHeading"
+          :content="$hoursContent"
+        >
+          <x-icon name="clock" />
+          <x-slot:extra>
+            <div class="mt-2 space-y-1.5 text-sm">
+              <div class="flex items-center gap-x-2">
+                <span class="font-medium text-neutral-700 dark:text-neutral-300">{{ $weekdayLabel }}:</span>
+                <span class="text-neutral-600 dark:text-neutral-400">{{ $weekdayHours }}</span>
+              </div>
+              <div class="flex items-center gap-x-2">
+                <span class="font-medium text-neutral-700 dark:text-neutral-300">{{ $saturdayLabel }}:</span>
+                <span class="text-neutral-600 dark:text-neutral-400">{{ $saturdayHours }}</span>
+              </div>
+            </div>
+          </x-slot:extra>
+        </x-blocks.contact-icon-block>
+
+        <x-blocks.contact-icon-block
+          :heading="$officeHeading"
+          :content="$officeBrand"
+          :isAddressVisible="true"
+          :addressContent="$officeAddress"
+        ><x-icon name="mapPin" />
         </x-blocks.contact-icon-block>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Submission Success Pop-up Modal -->
+<div
+  id="inquiry-success-modal"
+  class="fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="success-modal-text"
+>
+  <!-- 20% Blurred Background Backdrop -->
+  <div
+    id="inquiry-modal-backdrop"
+    class="fixed inset-0 bg-neutral-900/20 backdrop-blur-[4px] transition-opacity duration-300"
+  ></div>
+
+  <!-- Pop-up Message Card -->
+  <div
+    id="inquiry-modal-card"
+    class="relative w-full max-w-md transform rounded-2xl bg-white p-6 sm:p-8 text-center shadow-2xl transition-all duration-300 scale-95 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+  >
+    <!-- Cancel / Close Button in Top-Right Corner -->
+    <button
+      type="button"
+      id="inquiry-modal-close-btn"
+      class="absolute top-3.5 right-3.5 inline-flex h-8 w-8 items-center justify-center rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600 focus:outline-hidden dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 transition duration-200"
+      aria-label="Close"
+    >
+      <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Green Check Mark in a Circle -->
+    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-950/70 dark:text-emerald-400 ring-8 ring-emerald-50 dark:ring-emerald-900/20">
+      <svg class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+      </svg>
+    </div>
+
+    <!-- Bold & Green Text -->
+    <p
+      id="success-modal-text"
+      class="mt-5 text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 leading-relaxed"
+    >
+      {{ $formSubTitle }}
+    </p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const contactForm = document.getElementById('project-inquiry-form');
+    const modal = document.getElementById('inquiry-success-modal');
+    const modalCard = document.getElementById('inquiry-modal-card');
+    const backdrop = document.getElementById('inquiry-modal-backdrop');
+    const closeBtn = document.getElementById('inquiry-modal-close-btn');
+    let autoCloseTimer = null;
+
+    function showModal() {
+      if (!modal) return;
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      if (modalCard) {
+        modalCard.classList.remove('scale-95');
+        modalCard.classList.add('scale-100');
+      }
+
+      clearTimeout(autoCloseTimer);
+      autoCloseTimer = setTimeout(function () {
+        hideModal();
+      }, 5000);
+    }
+
+    function hideModal() {
+      if (!modal) return;
+      clearTimeout(autoCloseTimer);
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      if (modalCard) {
+        modalCard.classList.remove('scale-100');
+        modalCard.classList.add('scale-95');
+      }
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hideModal);
+    }
+    if (backdrop) {
+      backdrop.addEventListener('click', hideModal);
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') hideModal();
+    });
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const fullName = (document.getElementById('hs-firstname-contacts')?.value || '').trim();
+      const organization = (document.getElementById('hs-lastname-contacts')?.value || '').trim();
+      const email = (document.getElementById('hs-email-contacts')?.value || '').trim();
+      const phone = (document.getElementById('hs-phone-number')?.value || '').trim();
+      const service = (document.getElementById('hs-service-contacts')?.value || '').trim();
+      const budget = (document.getElementById('hs-budget-contacts')?.value || '').trim();
+      const details = (document.getElementById('hs-about-contacts')?.value || '').trim();
+
+      const lines = [
+        '*New Project Inquiry - ColorSpire Creations*',
+        '',
+        `*Name:* ${fullName || 'Not provided'}`,
+      ];
+
+      if (organization) {
+        lines.push(`*Organization:* ${organization}`);
+      }
+      if (email) {
+        lines.push(`*Email:* ${email}`);
+      }
+      if (phone) {
+        lines.push(`*Phone:* ${phone}`);
+      }
+      if (service) {
+        lines.push(`*Service:* ${service}`);
+      }
+      if (budget) {
+        lines.push(`*Budget:* ${budget}`);
+      }
+      if (details) {
+        lines.push('', '*Project Details:*', details);
+      }
+
+      const text = lines.join('\n');
+      const waUrl = 'https://wa.me/260763505811?text=' + encodeURIComponent(text);
+
+      showModal();
+
+      const win = window.open(waUrl, '_blank');
+      if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = waUrl;
+      }
+    });
+  })();
+</script>

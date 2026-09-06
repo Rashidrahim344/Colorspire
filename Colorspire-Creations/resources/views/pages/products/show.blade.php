@@ -1,6 +1,6 @@
 @php
 $metaDescription = $product['data']['description'];
-$ogTitle = "{$product['data']['title']} | Hardware Tools | {$site['title']}";
+$ogTitle = "{$product['data']['title']} | Portfolio | {$site['title']}";
 $pageTitle = "{$product['data']['title']} | {$site['title']}";
 
 $imgMain = str_starts_with($product['data']['main']['imgMain'], 'http')

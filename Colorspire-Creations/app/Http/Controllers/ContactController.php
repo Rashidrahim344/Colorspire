@@ -27,8 +27,8 @@ class ContactController extends Controller
         ]);
 
         return back()->with('success', $locale === 'fr' 
-            ? 'Votre message a été envoyé avec succès. Nous vous contacterons sous peu !'
-            : 'Your message has been sent successfully. We will get back to you shortly!'
+            ? 'Merci de nous avoir contactés. Votre demande de projet a bien été reçue. Nous examinerons les détails et reviendrons vers vous via les coordonnées fournies.'
+            : 'Thanks for reaching out. Your project inquiry has been received. We’ll review the details and get back to you through the contact information you provided.'
         );
     }
 }
